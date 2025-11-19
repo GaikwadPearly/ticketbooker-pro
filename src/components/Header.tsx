@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Film, User, LogOut, Ticket } from "lucide-react";
+import { Film, User, LogOut, Ticket, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -42,6 +42,12 @@ export const Header = ({ user }: HeaderProps) => {
         </Link>
 
         <nav className="flex items-center gap-4">
+          <Link to="/feedback">
+            <Button variant="ghost" size="sm" className="gap-2">
+              <MessageSquare className="w-4 h-4" />
+              Feedback
+            </Button>
+          </Link>
           {user ? (
             <>
               <Link to="/bookings">

@@ -88,6 +88,30 @@ export type Database = {
           },
         ]
       }
+      feedback: {
+        Row: {
+          created_at: string
+          feedback_text: string
+          id: string
+          rating: number
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          feedback_text: string
+          id?: string
+          rating: number
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          feedback_text?: string
+          id?: string
+          rating?: number
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       movies: {
         Row: {
           banner_url: string | null
