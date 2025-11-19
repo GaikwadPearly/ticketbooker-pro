@@ -8,6 +8,7 @@ import Auth from "./pages/Auth";
 import MovieDetail from "./pages/MovieDetail";
 import SeatSelection from "./pages/SeatSelection";
 import Bookings from "./pages/Bookings";
+import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/seats/:showtimeId" element={<SeatSelection />} />
           <Route path="/bookings" element={<Bookings />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
